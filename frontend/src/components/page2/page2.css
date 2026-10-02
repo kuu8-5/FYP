@@ -1,0 +1,107 @@
+.turtle-page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.turtle-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.turtle-toolbar h2 {
+  margin: 0 auto 0 0;
+  font-size: 20px;
+}
+
+.turtle-layout {
+  display: flex;
+  height: min(520px, 65vh);
+  min-height: 380px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.turtle-blockly {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+}
+
+.turtle-side {
+  flex: 0 0 300px;
+  width: 300px;
+  padding: 12px;
+  overflow-y: auto;
+  border-left: 1px solid var(--border);
+  background: var(--code-bg);
+}
+
+.turtle-side h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.turtle-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 276px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.turtle-hidden {
+  display: none;
+}
+
+.turtle-status {
+  min-height: 22px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.turtle-hint {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.turtle-code {
+  max-height: 150px;
+  margin: 0;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: #111827;
+  color: #d1fae5;
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .turtle-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .turtle-blockly {
+    height: 360px;
+  }
+
+  .turtle-side {
+    flex: 1 1 auto;
+    width: auto;
+    border-top: 1px solid var(--border);
+    border-left: none;
+  }
+}
